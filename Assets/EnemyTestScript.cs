@@ -35,4 +35,6 @@ public class EnemyTestScript : MonoBehaviour
             enemyRB.linearVelocity = new Vector2(0, -5);
         }
     }
+
+   
 }
