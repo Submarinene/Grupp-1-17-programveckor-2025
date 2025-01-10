@@ -28,22 +28,9 @@ public class PlayerHealth : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        phealth = collision.gameObject.GetComponent<PlayerHealth>();
-        if (phealth == null)
-        {
-            return;
-        }
-
-        phealth.Hurt(hurtAmount);
-        Destroy(gameObject);
-
-    }
-    void Update()
-    {
-        if (transform.position.y < -5.6f) // if the ball is outside this position then
+        // if (transform.position.y < -5.6f) // if the ball is outside this position then
         {
             maxHealth--; //lives = lives -1;
             hjärtan[maxHealth].GetComponent<Image>().enabled = false;
@@ -55,5 +42,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
-
-
+    void Update()
+    {
+    }
+}
