@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     GameObject[] hjärtan;
     int maxHealth = 3;
     int health;
+    int hurtAmount = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +41,19 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
 
     }
-}
+    void Update()
+    {
+        if (transform.position.y < -5.6f) // if the ball is outside this position then
+        {
+            maxHealth--; //lives = lives -1;
+            hjärtan[maxHealth].GetComponent<Image>().enabled = false;
+            transform.position = new Vector2(0, -2); //makes the player respawn
+            if (maxHealth == 0)
+            {
+                //change to game over scene
+                SceneManager.LoadScene("gameover");
+            }
+        }
+    }
 
 
