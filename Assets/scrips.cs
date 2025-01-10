@@ -48,6 +48,7 @@ public class PlattformPlayerMovement : MonoBehaviour
                 rb.linearVelocity = new Vector2(-maxSpeed, 0);
             }
         }
+<<<<<<< HEAD
 
 
 
@@ -65,5 +66,8 @@ public class PlattformPlayerMovement : MonoBehaviour
         {
             transform.position = new Vector2(11, transform.position.y);
         }
+=======
+        
+>>>>>>> ad7444e9519205c75810dbe28aa999a309f50bcf
     }
 }
