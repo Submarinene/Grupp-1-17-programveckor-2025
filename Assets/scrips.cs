@@ -48,6 +48,26 @@ public class PlattformPlayerMovement : MonoBehaviour
                 rb.linearVelocity = new Vector2(-maxSpeed, 0);
             }
         }
+<<<<<<< HEAD
+
+
+
+
+        //friktion
+        rb.linearVelocity = rb.linearVelocity * (1f - friction * Time.deltaTime);
+
+
+        //Teleportera till andra sidan
+        if (transform.position.x > 11)
+        {
+            transform.position = new Vector2(-11, transform.position.y);
+        }
+        if (transform.position.x < -11)
+        {
+            transform.position = new Vector2(11, transform.position.y);
+        }
+=======
         
+>>>>>>> ad7444e9519205c75810dbe28aa999a309f50bcf
     }
 }
