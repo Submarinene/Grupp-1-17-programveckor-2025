@@ -25,4 +25,18 @@ public class PlayerHealth : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        phealth = collision.gameObject.GetComponent<PlayerHealth>();
+        if (phealth == null)
+        {
+            return;
+        }
+
+        phealth.Hurt(hurtAmount);
+        Destroy(gameObject);
+    }
 }
+
+
