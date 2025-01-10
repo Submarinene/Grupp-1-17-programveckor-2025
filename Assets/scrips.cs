@@ -23,47 +23,31 @@ public class PlattformPlayerMovement : MonoBehaviour
     {
 
 
-        //Rörelse
+        //Rï¿½relse
         if (Input.GetKey(KeyCode.RightArrow))
         {
 
 
-            if (rb.velocity.x < maxSpeed)
+            if (rb.linearVelocity.x < maxSpeed)
             {
-                rb.velocity = rb.velocity + new Vector2(accelerationSpeed * Time.deltaTime, 0);
+                rb.linearVelocity = rb.linearVelocity + new Vector2(accelerationSpeed * Time.deltaTime, 0);
             }
             else
             {
-                rb.velocity = new Vector2(maxSpeed, 0);
+                rb.linearVelocity = new Vector2(maxSpeed, 0);
             }
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if (rb.velocity.x > -maxSpeed)
+            if (rb.linearVelocity.x > -maxSpeed)
             {
-                rb.velocity = rb.velocity + new Vector2(-accelerationSpeed * Time.deltaTime, 0);
+                rb.linearVelocity = rb.linearVelocity + new Vector2(-accelerationSpeed * Time.deltaTime, 0);
             }
             else
             {
-                rb.velocity = new Vector2(-maxSpeed, 0);
+                rb.linearVelocity = new Vector2(-maxSpeed, 0);
             }
         }
-
-
-
-
-        //friktion
-        rb.velocity = rb.velocity * (1f - friction * Time.deltaTime);
-
-
-        //Teleportera till andra sidan
-        if (transform.position.x > 11)
-        {
-            transform.position = new Vector2(-11, transform.position.y);
-        }
-        if (transform.position.x < -11)
-        {
-            transform.position = new Vector2(11, transform.position.y);
-        }
+        
     }
 }
