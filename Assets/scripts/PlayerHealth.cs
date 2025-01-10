@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("You got hit");
         health--; //lives = lives -1;
-        hjärtan[maxHealth].GetComponent<Image>().enabled = false;
+        hjärtan[].GetComponent<Image>().enabled = false;
         transform.position = new Vector2(0, -2); //makes the player respawn
         if (health == 0)
         {
