@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 388344723}
   - component: {fileID: 388344727}
   - component: {fileID: 388344726}
+  - component: {fileID: 388344729}
   m_Layer: 0
   m_Name: nanobott
   m_TagString: Untagged
@@ -401,6 +402,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &388344729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388344722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99316d858e2a76142a8679de724ad307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "hj\xE4rtan":
+  - {fileID: 1707245426}
+  - {fileID: 446629514}
+  - {fileID: 255545649}
 --- !u!1 &425499488
 GameObject:
   m_ObjectHideFlags: 0

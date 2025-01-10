@@ -23,29 +23,29 @@ public class PlattformPlayerMovement : MonoBehaviour
     {
 
 
-        //Rörelse
+        //Rï¿½relse
         if (Input.GetKey(KeyCode.RightArrow))
         {
 
 
-            if (rb.velocity.x < maxSpeed)
+            if (rb.linearVelocity.x < maxSpeed)
             {
-                rb.velocity = rb.velocity + new Vector2(accelerationSpeed * Time.deltaTime, 0);
+                rb.linearVelocity = rb.linearVelocity + new Vector2(accelerationSpeed * Time.deltaTime, 0);
             }
             else
             {
-                rb.velocity = new Vector2(maxSpeed, 0);
+                rb.linearVelocity = new Vector2(maxSpeed, 0);
             }
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if (rb.velocity.x > -maxSpeed)
+            if (rb.linearVelocity.x > -maxSpeed)
             {
-                rb.velocity = rb.velocity + new Vector2(-accelerationSpeed * Time.deltaTime, 0);
+                rb.linearVelocity = rb.linearVelocity + new Vector2(-accelerationSpeed * Time.deltaTime, 0);
             }
             else
             {
-                rb.velocity = new Vector2(-maxSpeed, 0);
+                rb.linearVelocity = new Vector2(-maxSpeed, 0);
             }
         }
 
@@ -53,7 +53,7 @@ public class PlattformPlayerMovement : MonoBehaviour
 
 
         //friktion
-        rb.velocity = rb.velocity * (1f - friction * Time.deltaTime);
+        rb.linearVelocity = rb.linearVelocity * (1f - friction * Time.deltaTime);
 
 
         //Teleportera till andra sidan
