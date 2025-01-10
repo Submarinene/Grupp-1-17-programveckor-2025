@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
+    GameObject[] hjärtan;
     int maxHealth = 3;
     int health;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
 
         phealth.Hurt(hurtAmount);
         Destroy(gameObject);
+
     }
 }
 
