@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Laser : MonoBehaviour
+public class laser : MonoBehaviour
 {
     public float speed = 10f;           // Hastighet på laserskottet
     public float lifetime = 2f;         // Hur länge skottet lever innan det försvinner
