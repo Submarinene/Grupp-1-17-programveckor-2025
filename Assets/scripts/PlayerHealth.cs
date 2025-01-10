@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField]
     int maxHealth = 3;
     int health;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
